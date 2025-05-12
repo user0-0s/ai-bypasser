@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bypasser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+            text-align: left;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Bypasser</h1>
+    <p>Type your text below and click "Rewrite" to make it simple and hide it from AI detectors!</p>
+    <textarea id="input" placeholder="Enter your text here..."></textarea><br>
+    <button onclick="rewrite()">Rewrite</button>
+    <div id="output">Your new text will appear here.</div>
+
+    <script src="ai_bypasser.js"></script>
+    <script>
+        function rewrite() {
+            const input = document.getElementById('input').value;
+            const output = aiBypass(input);
+            document.getElementById('output').innerText = output;
+        }
+    </script>
+</body>
+</html>
